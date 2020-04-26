@@ -28,7 +28,7 @@ def actionModel(classifier):
 def trainModel(csv_path, pipeline):
     df = pd.read_csv(csv_path)
     X = df['image'].values
-    y = df['labels']
+    y = df['label']
     pipeline = pipeline.fit(X, y)
     return pipeline.get_params()['steps'][1][1]  
 
