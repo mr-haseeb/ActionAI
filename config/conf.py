@@ -5,8 +5,8 @@ from sklearn.linear_model import LogisticRegression as classifier
 stream = 0
 
 # Set path to staged data, raw images, pickled sklearn model
-csv_path = 'data/data.csv'
-images_dir = 'path/to/images/dir'
+csv_path = '../input/state-farm-distracted-driver-detection/driver_imgs_list.csv'
+images_dir = '../input/state-farm-distracted-driver-detection/imgs/train/'
 classifier_model = 'models/classifier.sav'
 
 # Set path to pose estimation model asset and body keypoint map
