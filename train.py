@@ -13,7 +13,7 @@ def actionModel(classifier):
                ])
     return pipeline
 """
-
+from sklearn.linear_model import LogisticRegression as classifier
 import pandas as pd
 from sklearn.pipeline import Pipeline
 
@@ -47,7 +47,7 @@ if __name__ == '__main__':
     images_dir = '/content/content/tmp/imgs/train/'
     classifier_model = '/content/ActionAI/models/classifier.sav'
     
-    pipeline = actionModel(config.classifier())
+    pipeline = actionModel(classifier())
     model = trainModel(csv_path, pipeline)
 
     # Dump the model to file
