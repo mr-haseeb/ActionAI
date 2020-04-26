@@ -33,16 +33,16 @@ def trainModel(csv_path, pipeline):
     return pipeline.get_params()['steps'][1][1]  
 
 if __name__ == '__main__':
-    import pickle
-    import argparse
-    import importlib
+#     import pickle
+#     import argparse
+#     import importlib
 
-    parser = argparse.ArgumentParser(description='Train pose classifier')
-    parser.add_argument('--config', type=str, default='conf',
-                        help="name of config .py file inside config/ directory, default: 'conf'")
-    args = parser.parse_args()
+#     parser = argparse.ArgumentParser(description='Train pose classifier')
+#     parser.add_argument('--config', type=str, default='conf',
+#                         help="name of config .py file inside config/ directory, default: 'conf'")
+#     args = parser.parse_args()
 #     config = importlib.import_module('config.' + args.config)
-    config = importlib.import_module('/content/ActionAI/config')
+#     config = importlib.import_module('/content/ActionAI/config')
     csv_path = '/content/content/tmp/driver_imgs_list.csv'
     images_dir = '/content/content/tmp/imgs/train/'
     classifier_model = '/content/ActionAI/models/classifier.sav'
