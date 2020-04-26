@@ -41,7 +41,8 @@ if __name__ == '__main__':
     parser.add_argument('--config', type=str, default='conf',
                         help="name of config .py file inside config/ directory, default: 'conf'")
     args = parser.parse_args()
-    config = importlib.import_module('config.' + args.config)
+#     config = importlib.import_module('config.' + args.config)
+    config = importlib.import_module('/content/ActionAI/config')
 
     pipeline = actionModel(config.classifier())
     model = trainModel(config.csv_path, pipeline)
