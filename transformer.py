@@ -18,7 +18,7 @@ except:
     pass
 
 class PoseExtractor(BaseEstimator, TransformerMixin):
-    def __init__(self, model_path='./models/pose.tflite'):
+    def __init__(self, model_path='/content/ActionAI/models/pose.tflite'):
         self.model_path = model_path
         self.interpreter = tf.lite.Interpreter(model_path=self.model_path)
         self.interpreter.allocate_tensors()
