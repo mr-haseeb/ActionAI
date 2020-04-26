@@ -7,7 +7,7 @@ stream = 0
 # Set path to staged data, raw images, pickled sklearn model
 csv_path = '/content/content/tmp/driver_imgs_list.csv'
 images_dir = '/content/content/tmp/imgs/train/'
-classifier_model = 'models/classifier.sav'
+classifier_model = '/content/ActionAI/models/classifier.sav'
 
 # Set path to pose estimation model asset and body keypoint map
 pose_model = 'models/pose.tflite'
