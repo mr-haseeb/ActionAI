@@ -43,9 +43,12 @@ if __name__ == '__main__':
     args = parser.parse_args()
 #     config = importlib.import_module('config.' + args.config)
     config = importlib.import_module('/content/ActionAI/config')
-
+    csv_path = '/content/content/tmp/driver_imgs_list.csv'
+    images_dir = '/content/content/tmp/imgs/train/'
+    classifier_model = '/content/ActionAI/models/classifier.sav'
+    
     pipeline = actionModel(config.classifier())
-    model = trainModel(config.csv_path, pipeline)
+    model = trainModel(csv_path, pipeline)
 
     # Dump the model to file
     pickle.dump(model, open(config.classifier_model, 'wb'), protocol=2)
